@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Thumbnail Image Page</title>
+<head>
+    <style>
+
+        .nav-bar{
+            padding: 5px 100px 5px ;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0%;
+            z-index: 1;
+        }
+        .nav-bar ul li{
+            display: inline;
+            padding-left: 80px ;
+        }
+        .nav-bar ul li a{
+            text-decoration: none;
+            color: #24344C ;
+        }
+        .nav-btn{
+            color: white;
+            background-color: #FCA311;
+            padding: 13px 24px;
+            border: none;
+            border-radius: 25px;
+            margin-left: 72px;
+            font-weight: 700;
+        }
+        .logo{
+            padding: 0px;
+        }
+        .logo:hover::after{
+        }
+        .logo img{
+            max-height: 50px;
+        }
+        .container{
+            margin: 0px 140px 0px;
+        }
+        .nav-btn:hover{
+            background-color: #e28b00;
+            transition: 0.5s;
+            transform: scale(1.05,1.05) ;
+        }
+        body{
+            margin:0px;
+        }
+
+
+
+
+        .btn{
+            height: 40px;
+            width: 40px;
+
+
+        }
+        .cg{
+            background-color:rgb(47, 224, 255);
+            background-size: cover;
+            font-weight: bold;
+        }
+        .co{
+            background-color:orange;
+            background-size: cover;
+            font-weight: bold;
+        }
+        .cy{
+            background-color: yellow;
+            background-size: cover;
+            font-weight: bold;
+        }
+        .deti{
+            width:100%;
+            height: 100%;
+            background-size: cover;
+        }
+        .fullw{
+            background-size: cover;
+        }
+
+        .br{
+            color: red;
+            text-align:right ;
+            font-size:medium;
+        }
+        .bg{
+            color: green;
+            text-align: right;
+            font-size:medium;
+        }
+        .bp{
+            color: purple;
+            text-align: right;
+            font-size:medium;
+        }
+        h1{
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            background-color: yellowgreen;
+            background-size: 20px;
+        }
+        .btn1{
+
+        }
+        #paara{
+            text-align: left;
+            font-family: Arial Black;
+        }
+
+
+
+
+    </style>
+    <script>
+        function btn1(){
+
+            document.getElementById("paara").innerHTML="Usain Bolt, in full Usain St. Leo Bolt, (born August 21, 1986, Montego Bay, Jamaica), Jamaican sprinter who won gold medals in the 100-metre and 200-metre races in an unprecedented three straight Olympic Games and is widely considered the greatest sprinter of all time. Bolt, the son of grocers in Jamaica’s rural Trelawny parish, excelled as a cricket fast bowler in his preteen years. He developed a deep affection for the European football (soccer) teams Real Madrid and Manchester United, but his school coaches steered him toward track and field. Bolt first marked himself as a track prodigy at the 2002 world junior championships. In that meet, racing before a crowd of 36,000 in Jamaica’s National Stadium in Kingston, Bolt—just 15 years old at the time—won gold in the 200 metres, becoming the youngest-ever male world junior champion in any event. At age 16 Bolt cut the junior (age 19 and under) 200-metre world record to 20.13 sec, and at 17 he ran the event in 19.93 sec, becoming the first teenager to break 20 seconds in the race. However, hampered by a hamstring injury, he failed to advance beyond the 200-metre heats at the 2004 Olympics in Athens and placed last in the 2005 world track-and-field championships final.";
+
+        }
+        function btn2(){
+
+            document.getElementById("paara").innerHTML="Javier Sotomayor Sanabria  born October 13, 1967) is a retired Cuban track and field athlete, who specialized in the high jump and is the current world record holder.[2] The 1992 Olympic champion, he was the dominant high jumper of the 1990s; his personal best of 2.45 m (8 ft 1⁄4 in) makes him the only person to have ever cleared eight feet.Sotomayor is twice a gold medallist at the IAAF World Championships in Athletics and also won two silver medals at the competition. At the IAAF World Indoor Championships he won four gold medals between 1989 and 1999. In addition, he won three straight titles at the Pan American Games from 1987 to 1995. He is regarded as the best high jumper of all time. Cuban boycotts of the Olympics in 1984 and 1988 and an injury in 1996 cost him chances at additional Olympic medals, but he returned to win the silver medal at the 2000 Olympics in Sydney. Sotomayor retired in 2001.";
+
+        }
+
+        function btn3(){
+
+            document.getElementById("paara").innerHTML="Deshabandu Susanthika Jayasinghe (born December 17, 1975) is a Sri Lankan sprint athlete specializing in the 100 and 200 metres. She won the Olympic silver medal for the 200m event in the 2000 Summer Olympics in Sydney, the second Sri Lankan to win an Olympic medal and the first and only Asian to win an Olympic or world championship medal in a sprint event. She also won two gold medals at the 2007 Asian Athletics Championships and a bronze medal at the 2007 IAAF World Championships. She is known as the Asian Black Mare.";
+
+        }
+
+        function btn4(){
+
+            document.getElementById("paara").innerHTML="Damayanthi Dharsha-Kobalavithanage (born 13 February 1975) is a retired Sri Lankan athlete who competed in the 200 and 400 metres race.Dharsha made an initial impact at just 16 years when she won the 100 metres gold medal at the Colombo SAF Games in 1991 with a new record. She broke into the limelight by winning the 100 metre gold at the Asian Junior Championships the same year.In 1994, she won the bronze in the 200 metres behind Chinese Taipei’s Wang Huei-Chen and teammate Susanthika Jayasinghe at the Asian Games in Hiroshima. That was the beginning of a dominant period for Sri Lanka in women’s sprinting with Jayasinghe and Darsha seriously challenging the Chinese.In July 2007, Dharsha announced her retirement from athletics. ";
+
+        }
+
+        function btn5(){
+
+            document.getElementById("paara").innerHTML="Michael Anthony Powell (born November 10, 1963) is an American former track and field athlete, and the holder of the long jump world record. He is a two-time world champion in this event and two-time Olympic silver medallist, and has a world record of 8.95m.";
+
+        }
+        function colourB(){
+            var x=document.getElementById('colo').value;
+            if(x=="rgb(47, 224, 255)"){
+                document.getElementById("full").classList.add("cg");
+            }
+            else if(x=="orange"){
+                document.getElementById("full").classList.add("co");
+            }
+            else if(x=="yellow"){
+                document.getElementById("full").classList.add("cy");
+            }
+        }
+
+        function colourW(){
+            var x=document.getElementById('wcolo').value;
+            if(x=="red"){
+                document.getElementById("paara").classList.add("br");
+            }
+            else if(x=="green"){
+                document.getElementById("paara").classList.add("bg");
+            }
+            else if(x=="purple"){
+                document.getElementById("paara").classList.add("bp");
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+<div class="nav-bar" >
+    <div class="logo">
+        <img src="./img/logo.svg">
+    </div>
+    <div class="nav-list">
+        <ul>
+            <li><a href="#">Buy coins</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Scheme</a></li>
+            <button class="nav-btn">Sign-up <span><i class="fa-solid fa-right-to-bracket"></i></span></button>
+        </ul>
+    </div>
+</div>
+
+<div class="fullw" id="full">
+    <div class="deti">
+        <h1>Thumbnail Image</h1>
+
+        <img src="Img0.jpg " width="100%" height="50%" name="Image" alt="Image" id="iii">
+        <div id="paara" class="ba" >Usain Bolt, in full Usain St. Leo Bolt, (born August 21, 1986, Montego Bay, Jamaica), Jamaican sprinter who won gold medals in the 100-metre and 200-metre races in an unprecedented three straight Olympic Games and is widely considered the greatest sprinter of all time. Bolt, the son of grocers in Jamaica’s rural Trelawny parish, excelled as a cricket fast bowler in his preteen years. He developed a deep affection for the European football (soccer) teams Real Madrid and Manchester United, but his school coaches steered him toward track and field. Bolt first marked himself as a track prodigy at the 2002 world junior championships. In that meet, racing before a crowd of 36,000 in Jamaica’s National Stadium in Kingston, Bolt—just 15 years old at the time—won gold in the 200 metres, becoming the youngest-ever male world junior champion in any event. At age 16 Bolt cut the junior (age 19 and under) 200-metre world record to 20.13 sec, and at 17 he ran the event in 19.93 sec, becoming the first teenager to break 20 seconds in the race. However, hampered by a hamstring injury, he failed to advance beyond the 200-metre heats at the 2004 Olympics in Athens and placed last in the 2005 world track-and-field championships final..
+
+        </div>
+
+
+
+        <span onClick="btn1()"><button onClick="document.images[1].src='img0.jpg'" ><img src="img0.jpg" class='btn'></button></span>
+        <span onClick="btn2()"><button onClick="document.images[1].src='img1.jpg'" ><img src="img1.jpg" class='btn'></button></span>
+        <span onClick="btn3()"><button onClick="document.images[1].src='img2.jpg'" ><img src="img2.jpg" class='btn'></button></span>
+        <span onClick="btn4()"><button onClick="document.images[1].src='img3.jpg'" ><img src="img3.jpg" class='btn'></button></span>
+        <span onClick="btn5()"><button onClick="document.images[1].src='img4.jpg'" ><img src="img4.jpg" class='btn'></button></span>
+
+        <br><br>
+
+        <select id='colo' onclick="colourB()">
+            <option value='rgb(47, 224, 255)'>Light Blue</option>
+            <option value='orange'>orange</option>
+            <option value='yellow'>Yellow</option>
+        </select>
+
+        <select id='wcolo' onclick="colourW()">
+            <option value='red'>Red</option>
+            <option value='green'>Green</option>
+            <option value='purple'>Purple</option>
+        </select>
+
+    </div>
+
+<br><br>
+
+</div>
+
+
+</body>
+</html>

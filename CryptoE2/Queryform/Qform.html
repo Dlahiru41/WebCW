@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="Group2.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto E2</title>
+    <link rel="stylesheet" href="Qform.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@100;300;500;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ee22184a8.js" crossorigin="anonymous"></script>
+    <style>
+        #formsqr2{
+    position: relative;bottom:427px;
+    background:white;
+    width: 900px;
+    height: 600px;
+    border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--Navigation bar-->
+    <div class="nav-bar" >
+        <div class="logo">
+            <a href="C:\Users\ACER\Desktop\CryptoE2\Home page\index.html"><img src="./img/logo.svg"></a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Buy-products page\buy-product.html">Buy coins</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\quiz home page\quiz home.html">Learn</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Queryform\Qform.html">Help</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\about us\about us.html">About us</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Tumbnail\thumbnail page.html">Scheme</a></li>
+                <button class="nav-btn">Sign-up <span><i class="fa-solid fa-right-to-bracket"></i></span></button>
+            </ul>
+        </div>
+    </div>
+
+    <!--main body of the code-->
+    <div class="main">
+        <div class="section1">
+        	<h3>How Can We</h3>
+        	<h1>Help?</h1>
+       		<div id="cone"></div>
+	    	<div class="rect1">
+	        	<p id="pos1">We are here to help and answer any<br>question you might have</p>
+			</div>
+		</div>
+	    <div class="section2">	
+        	<div class="img1">
+        		<img src="img1.png">
+        	</div>
+        </div>
+        <div id="cone2"></div>
+        <div class="rect2">
+        	<p id="pos1">Choose from of one of the subjects</p>
+        </div>
+
+        <!--form-->
+    	<div class="formbar">
+    	   <p id="fbar">Fill out the following fields</p><br>
+    	</div>
+        <!--form input fields-->
+        <div class="formsqr">
+            <form id="query">
+                <div class="test">
+                <label for="name">Name :</label>
+                <input type="text" id="name" class="inputfield" name="name" placeholder="Enter your name.."><br>
+                </div>
+                <div class="test">
+                <label for ="email">E-mail :</label>
+                <input type="E-mail" id="emailid" class="inputfield" name="email" placeholder="Enter your email.."><br>
+                </div>
+                <label for="subject" id="spos">Subject :</label>
+                <input type="text" id="subject" class="inputfield" name="subject" readonly><br>
+                <div class="sq1">
+                <img class="imgpos" name='subject1' id="product" src="coins.png" alt="" value="Product Inquires">
+                <p id="txtpos">Product Inquires</p>
+                </div>
+                <div class="sq2">
+                <img class="imgpos" name='subject2' id="account" src="account.png" alt="" value="Account Help">
+                <p id="txtpos">Account Help</p>
+                </div>
+                <div class="sq3">
+                    <img class="imgpos" name="subject3" id="general" src="general.png" alt="" value="General Inquires">
+                    <p id="txtpos">General Inquires</p>
+                </div>
+                <label id ="detail" for="txtfield">Details :</label></a>
+                <textarea id="txtfield" name="txtarea" class="txtfield" placeholder="Type your problem"></textarea>
+                <input type="button" id="btcheck" onclick="formValid()" value="check">
+                <input type="button" id="view" class="vbutton" onclick="hideView()" value="view">
+            </form>
+            <!--form view page-->
+            <div id="formsqr2">
+                <div>
+                    <label>Name :</label><p class='displaypos' id="displayname"></p>
+                </div>
+                <div>
+                    <label>E-mail :</label><p class="displaypos"  id="displayemail"></p>
+                </div>
+                <div>
+                    <label>Subject :</label><p class="displaypos"  id="displaysubject"></p>
+                </div>
+                <div>
+                    <label>Details :</label><p class="displaypos"  id="displaytxt"></p>
+                </div>
+                <div>
+                    <button id='btview' onclick="showView()">edit</button>
+                </div>
+                <div>
+                <form onsubmit="alert('Your form has been submitted');">
+                    <input type="submit" id="btsubmit" value="submit">
+                </form>
+            </div>
+            </div>
+            <!--Javascript code-->
+            <script>
+                //function to send the value to the subject field when pressed on a subject
+                let product = document.getElementById("product");
+                let account = document.getElementById("account");
+                let general = document.getElementById("general");
+                
+            product.onclick = function () {
+                document.getElementById('subject').value=product.getAttribute("value");
+            };
+            account.onclick = function (){
+                document.getElementById('subject').value=account.getAttribute("value");
+            };
+            general.onclick = function (){
+                document.getElementById('subject').value=general.getAttribute("value");
+            }
+                //form validation function
+                var name = document.forms.query.name.value;
+                var email = document.forms.query.email.value;
+                var subject = document.forms.query.subject.value;
+                var txtfield = document.forms.query.txtfield.value;
+                var btcheck = document.forms.query.btcheck.value;
+                function formValid(){
+                if (document.forms.query.name.value==""){
+                    alert("Name must be filled");
+                }else if(document.forms.query.email.value==""){
+                    alert("Email must be filled");
+                }else if(document.forms.query.subject.value==""){
+                    alert("Please select a subject");
+                }else if(document.forms.query.txtfield.value==""){
+                    alert("Please discribe the issue");
+                }else
+                    return false;
+                }
+                //fucntion to display the form
+                let vname = document.getElementById('name');
+                let displayname = document.getElementById('displayname');
+                let vemail = document.getElementById('emailid');
+                let displayemail = document.getElementById('displayemail');
+                let vsubject = document.getElementById('subject');
+                let displaysubject = document.getElementById('displaysubject');
+                let vtxt = document.getElementById('txtfield');
+                let displaytxt = document.getElementById('displaytxt');
+                let view = document.getElementById('view');
+                function viewInput(){
+                    displayname.innerHTML=vname.value;
+                    displayemail.innerHTML=vemail.value;
+                    displaysubject.innerHTML=vsubject.value;
+                    displaytxt.innerHTML=vtxt.value;
+                }
+                view.addEventListener('click',viewInput);
+
+                function hideView(){
+                    document.getElementById("formsqr2").style.zIndex = "1"
+                    return false;
+                };
+                function showView(){
+                    document.getElementById("formsqr2").style.zIndex = "-1"
+                    return false;
+
+                };
+            </script>
+        </div>
+        <!--achor to access top of the page-->
+        <div class="top">
+            <h1><a href="#top"><i id="anc"class="fa-solid fa-circle-arrow-up"></i></a></h1>
+        </div>
+    </div>
+        <div>
+            <!--footer of the page-->
+            <div class="footer">
+                <div class="links">
+                    <div class="col1">
+                        <ul>
+                            <li><h4>Site Navigation</h4></li>
+                            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\index.html">Home</a></li>
+                            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Buy-products page\buy-product.html">Buy Coins</a></li>
+                            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Queryform\Qform.html">Help</a></li>
+                            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\quiz home page\quiz home.html">Learn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col1">
+                        <ul>
+                            <li><i class="fa-solid fa-horizontal-rule"></i></li>
+                            <li><a href="C:\Users\ACER\Desktop\CryptoE2\about us\about us.html">About us</a></li>
+                            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Tumbnail\thumbnail page.html">Scheme</a></li>
+                            <li><a href="navindu.html">Page editor</a></li>
+                        </ul>
+                    </div>
+                    <div class="col1">
+                        <ul>
+                            <li><h4>Follow us</h4></li>
+                            <li><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/">Facebook</a></li>
+                            <li><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/?lang=en">Twitter</a></li>
+                            <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <center>
+                        <h5>2022@teamE2</h5>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

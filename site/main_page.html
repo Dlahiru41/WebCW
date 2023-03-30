@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-size: 1rem; 
+		line-height: 1.5rem;
+		font-weight: 400;
+		color: #fff;
+		background: #212121;
+		}
+
+		/* Start Navigation Bar */
+
+		.navbar {
+		background-color: #25283D;
+		color: #ffffff;
+		border-radius: 3px;
+		max-width: 820px;
+		margin: 20px auto 0;
+		}
+
+		.navbar .menu {
+		display: flex;
+		position: relative;
+		}
+
+		@media (max-width: 820px) {
+		  .navbar .menu {
+			display: block;
+			position: relative;
+		  }
+		}
+
+		.navbar .menu li {
+		  flex: 1;
+		  display: flex;
+		  text-align: center;
+		  transition: background-color 0.1s ease;
+		}
+
+		.navbar .menu a {
+		  flex: 1;
+		  justify-content: center;
+		  display: inline-flex;
+		  color: #ffffff;
+		  text-decoration: none;
+		  padding: 20px;
+		  position: relative;
+		}
+
+		.navbar .menu a  .fa {
+		  font-weight: bold;
+		  margin-left: 8px;
+		}
+
+		.navbar .menu li:hover {
+		  background-color: #611117;
+		}
+
+		.navbar .menu li:hover .container {
+		  display: flex;
+		}
+
+		@media (max-width: 820px) {
+		  .navbar .menu li:hover .container {
+			display: none;
+
+		  }
+
+		a.hasDropdown:after {
+		  position: absolute;
+		  bottom: -16px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  height: 0;
+		  width: 0;
+		  border: 8px solid transparent;
+		  border-top-color: #25283d;
+		  z-index: 2;
+		}
+		  }
+		  
+		  .fa-angle-down {
+			display: none;
+		  }
+
+
+		@media (max-width: 820px) {
+		  li:hover a.hasDropdown:after {
+			display: none;
+		  }
+		}
+
+		li:hover a.hasDropdown:after {
+		  content: '';
+		  border-top-color: #611117;
+		}
+
+		/* End Navigation Bar */
+
+		/* Start Single Section Menu */
+
+		.container {
+		  display: none;
+		  position: absolute;
+		  top: 56px;
+		  left: 0;
+		  right: 0;
+		  background-color: #6111167a;
+		  box-shadow: 0 2px 0 rgb(78, 37, 37);
+		  padding: 20px;
+		  text-align: right;
+		  margin-bottom: 15px;
+		}
+
+		.container__list {
+		  flex: 1;
+		  display: flex;
+		  flex-wrap: wrap;
+		  min-width: 0;
+		}
+
+		.container__listItem {
+		  flex: 0 0 25%;
+		  padding: 10px 20px;
+		  overflow: hidden;
+		  white-space: nowrap;
+		  text-overflow: ellipsis;
+		}
+
+		.container__listItem  div {
+		  color: #ffffff;
+		  text-decoration: underline;
+		  cursor: pointer;
+		  overflow: hidden;
+		  white-space: nowrap;
+		  text-overflow: ellipsis;
+		}
+
+		/* End Single Section Menu */
+
+		/* Start Multiple Section Menu */
+		.container.has-multi .container__listItem {
+		  flex-basis: 100%;
+		}
+
+		.container.has-multi .container__list {
+		  flex-basis: 33.333%;
+		  border-radius: 4px;
+		}
+
+		.container.has-multi .container__list:not(:last-child) {
+		  border-right: solid 1px #f3f3f3;
+		  margin-right: 20px;
+		}
+
+		/* End Multiple Section Menu */
+		* {
+		  box-sizing:border-box;
+		}
+
+		body,
+		html {
+		  padding: 0;
+		  margin: 0;
+		}
+
+
+
+		/* ---- wrapper */
+		#content-slider .slider-wrap {
+		  max-width: 1200px;
+		  width: 100%;
+		  margin: 0px auto;
+		  position: relative;
+		  text-align: right;
+		}
+
+		#content-slider .slider-wrap.full {
+		  width: 100%;
+		  max-width: 100%;
+		  text-align: center; 
+		  border: none;
+		}
+
+
+		/* -------- Link style */
+		#content-slider *:focus {
+		  outline: 0;
+		} 
+
+
+
+		#content-slider a:focus {
+		  outline: thin dotted #333;
+		  outline: 5px auto -webkit-focus-ring-color;
+		  outline-offset: -2px;
+		}
+
+		#content-slider a:hover,
+		#content-slider a:active {
+		  outline: 0;
+		}
+
+
+
+		/* -------> Main */
+		#content-slider .slider {
+		  overflow: hidden;
+		  width: 100%;
+		  height: 35rem;
+		  margin: 0 auto;       
+
+		  position: relative;               
+		}
+
+		#content-slider .slider-inner {
+		  width: 500%;          
+		  line-height: 0;
+		  display: flex;
+		  height: 100%;
+
+		  animation: 5s slidy infinite;
+		  transition: all 2s ease-in-out; 
+		}
+
+		#content-slider .slider-main-title {
+		  text-align: center;
+		  font-weight: 700;
+		  font-size: 2rem;          
+		  line-height: 3rem;
+		  text-transform: uppercase;
+		  margin: 1rem 0;
+		}
+
+		#content-slider .slider .slider-head {
+		  position: absolute;
+		  z-index: 12;
+		  width: 40%;
+		  height: auto;
+		  display: inline-block;
+		  background: rgba(0, 0, 0, 0.5);
+		  padding: 1rem 1rem;
+		  margin: 1rem 0 0 1rem;
+		  overflow: hidden;
+
+		  transition: all 0.5s ease-in-out; 
+		}
+
+		#content-slider .slider-thumb .slider-head {
+		  position: absolute;
+		  z-index: 12;                      
+		  top: 0;
+		  right: 0;
+		  width: auto;
+		  height: auto;  
+		  text-align: right;
+		  margin: .5rem .5rem 0 0;
+		  opacity: 1;
+		  overflow: hidden;
+
+		  transition: all 0.5s ease-in-out;
+		}
+
+		/* -------Article */
+		#content-slider .slider h2,
+		#content-slider .slider-thumb h2 {
+		  color: #fff;
+		  text-transform: uppercase;
+		  padding: 0;
+		  margin: 0;
+		  font-weight: 700;
+		  line-height: 1.2;
+		}
+
+		#content-slider .slider p,
+		#content-slider .slider-thumb p {
+		  color: #fffefe;
+		  padding: 0;
+		  margin: 0 0 1rem;
+		  opacity: .8;
+		  line-height: 1.2;
+		}
+
+		#content-slider .slider a,
+		#content-slider .slider-thumb a {
+		  font-weight: 700;
+		  color: #00ABFA;
+		  text-decoration: none;
+		  line-height: 1.2;
+		}
+
+		/* -------Article IMg Slider */
+		#content-slider .slider h1 { font-size: 1.5rem; line-height: 1.2; }
+
+		#content-slider .slider p { font-size: 1.2rem; line-height: 1.2; }
+
+		#content-slider .slider a { font-size: 1rem; line-height: 1.2; }
+
+		/* ------- Article IMg Prev */
+		#content-slider .slider-thumb h2 { font-size: 1rem; line-height: 1.2; }
+
+		#content-slider .slider-thumb p { font-size: .875rem; line-height: 1.2; }
+
+		#content-slider .slider-thumb a { font-size: .75rem; line-height: 1.2; }
+
+
+		/* -------Main Img */
+		#content-slider figure {
+		  margin: 0;
+		  padding: 0;
+		  width: 20%;
+		  cursor: pointer;
+
+		  transition: all 2s ease-in-out; 
+		}
+
+		#content-slider figure img {
+		  width: 100%;
+		  position: relative;
+		}   
+
+		/* -------Max contrls img preview */ 
+		#content-slider .slider-thumb {
+		  width: 25%;
+		  margin: 35rem 0% 0 0%;
+		  text-align: center;
+		  display: block;
+		  z-index: 1000;
+		  cursor: pointer;
+		  position: absolute;
+		}
+
+		#content-slider .slider-thumb:after {
+		  content: '';
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background: #000;
+		  opacity: .55;
+		  transition: all .2s ease-in-out;
+		}
+
+		#content-slider .slider-thumb:hover:after {
+		  opacity: 0;
+		}
+
+		#thumb-1 { left: 0; }
+		#thumb-2 { left: 25%; }
+		#thumb-3 { left: 50%; }
+		#thumb-4 { left: 75%; }
+
+		#content-slider input[type='radio'] {           
+		  width: 10px;
+		  height: 10px;
+		  position: absolute;
+		  display: none;
+		}
+
+		#content-slider .slider-arrow-control {                   
+		  position: absolute;
+		  left: 0;
+		  z-index: 15;          
+		  top: 0%;
+		  width: 100%;
+		  height: 3.125rem;
+		  top: 50%;
+		  transform: translateY(-50%);
+		}
+
+		#content-slider .slider-dot {
+		  width: 9px;
+		  height: 9px;
+		  margin: 0 2px;
+		  text-align: center;
+		  display: inline-block;
+		  position: relative;
+		  z-index: 1000;
+		  cursor: pointer;
+		  border-radius: 100%;
+		  border: 2px solid #00ABFA;
+		  background: #00ABFA;
+
+		  transition: all 0.3s ease-in-out; 
+		}
+
+		#content-slider .slider-dot-control {
+		  padding: 1rem 0;
+		  width: 100%;
+		  bottom: 0;
+		  z-index: 10;
+		  position: absolute;
+		  text-align: center;
+		  background: rgba(0, 0, 0, 0.7);
+		  font-size: 0;
+		  line-height: 0;
+		}   
+
+		#content-slider .slider-dot-control>label:hover { 
+		  width: 9px; 
+		  height: 9px; 
+		  background: #FFF; 
+		  border: 1px solid #00ABFA; 
+		}     
+
+
+		/* -------Controls */ 
+
+
+		#input-1:checked ~ .slider .slider-inner { margin-left: 0%;   }
+		#input-2:checked ~ .slider .slider-inner { margin-left:-100%; }
+		#input-3:checked ~ .slider .slider-inner { margin-left:-200%; }
+		#input-4:checked ~ .slider .slider-inner { margin-left:-300%; }
+		#input-5:checked ~ .slider .slider-inner { margin-left:-400%; }
+
+
+		#input-1:checked ~ .slider-dot-control>label:nth-child(1) { opacity: 1; background: #fff; }
+		#input-2:checked ~ .slider-dot-control>label:nth-child(2) { opacity: 1; background: #fff; }
+		#input-3:checked ~ .slider-dot-control>label:nth-child(3) { opacity: 1; background: #fff; }
+		#input-4:checked ~ .slider-dot-control>label:nth-child(4) { opacity: 1; background: #fff; }
+
+
+		#input-1:checked ~ #thumb-1:after { opacity: 0; }
+		#input-2:checked ~ #thumb-2:after { opacity: 0; }
+		#input-3:checked ~ #thumb-3:after { opacity: 0; }
+		#input-4:checked ~ #thumb-4:after { opacity: 0; }
+
+
+		.slider-arrow-control>label:nth-child(2) {
+		  width: 3.125rem;
+		  height: 3.125rem;
+		  top: 50%;
+		  margin-top: -1.5625rem;
+		  display: inline-block;
+		  position: relative;           
+		  cursor: pointer;
+		}
+
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(2),
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(3),
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(4),
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(1),
+		#input-5:checked ~ .slider-arrow-control>label:nth-child(1),
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(4),
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(1),
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(2),
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(3) {
+		  width: 3.125rem;
+		  height: 3.125rem;
+		  top: 50%;
+		  margin-top: -1.5625rem;
+		  display: inline-block;
+		  position: relative;           
+		  cursor: pointer;
+		}
+
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(2):after,
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(3):after,
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(4):after,
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(1):after,
+		#input-5:checked ~ .slider-arrow-control>label:nth-child(1):after,
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(4):after,
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(1):after,
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(2):after,
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(3):after {
+		  font-family: "Font Awesome 5 Free";
+		  font-weight: 900;
+		  font-size: 2.125rem;
+		  line-height: 3.125rem;
+		  color: #00ABFA;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  text-align: center;
+		  width: 3.125rem;
+		  background: rgba(0,0,0,.5);
+		}
+
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(2),  
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(3), 
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(4), 
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(1) {       
+		  float: right;
+		  right: 0;                      
+		}
+
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(2):after,  
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(3):after, 
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(4):after, 
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(1):after {
+		  content: "\f054";                     
+		}
+
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(4),
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(1),
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(2),
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(3) {   
+		  float: left;
+		  left: 0;           
+		}
+
+		#input-1:checked ~ .slider-arrow-control>label:nth-child(4):after,
+		#input-2:checked ~ .slider-arrow-control>label:nth-child(1):after,
+		#input-3:checked ~ .slider-arrow-control>label:nth-child(2):after,
+		#input-4:checked ~ .slider-arrow-control>label:nth-child(3):after {
+		  content: "\f053";
+		}
+
+		#content-slider input:checked ~ .slider-inner {
+		  animation: none;         
+		}
+		#content-slider input:hover ~ .slider-inner, 
+		#content-slider label:hover ~ .slider-inner {
+		  animation-play-state: paused;
+		}
+		#content-slider input:hover ~ .slider-inner, 
+		#content-slider label:hover ~ .slider-inner {
+		  animation-play-state: paused;
+		}
+		#content-slider span:focus ~ .slider-inner {
+		  animation: none;         
+		}
+		#content-slider span:hover ~ .slider-inner {
+		  animation-play-state: paused;
+		}
+
+
+
+
+
+		/*--Button Start-- shop Now*/
+		#wrapper {
+		  width: 40%;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.container {
+		  width: 40%;
+		  margin: 0 auto;
+		}
+		section button {
+		  margin: 0 auto;
+		  font-size: 10px;
+		  padding: 1.25rem 2.5rem;
+		  display: block;
+		  background-color: #25283D;
+		  border: 1px solid transparent;
+		  color: #ffffff;
+		  font-weight: 300;
+		  -webkit-border-radius: 3px;
+		  border-radius: 3px;
+		  -webkit-transition: all 0.3s ease-in-out;
+		  -moz-transition: all 0.3s ease-in-out;
+		  transition: all 0.3s ease-in-out;
+		}
+
+		section button:hover {
+		  background-color: #611117;
+		  color: #ffffff;
+		 
+		  
+		}
+
+
+
+		img { height: auto; max-width: 100%; }
+
+		.button { background-color: #25283D; border: 0px solid #25283D; color: #ffffff; display: inline-block; font-size: 18px; font-weight: 600; margin: 0; padding: 12px 32px 14px 32px; text-decoration: none; text-transform: uppercase; }
+		.button:hover { background-color: #611117; color: #ffffff; }
+
+		.site-header { background-color: #FEDF9E; margin: 5%; }
+
+		nav a { color: black; display: inline-block; margin: 0 4px; text-decoration: none; }
+		nav a:first-child { margin: 0 4px 0 0; }
+
+		main { margin: 0 5%; }
+
+		.home-page { display: grid; font-size: 24px; grid-template-columns: 50% 50%; line-height: 1.4; margin: 2em auto 0 auto; max-width: 45em; padding: 0; }
+		.home-page h1 { font-size: 1em; margin: 4em 0 0 0; }
+		.home-page .button { margin: 1em 0; }
+
+		footer { background-color: #000000; color: rgba(255, 255, 255, 0.6); padding: 5%; }
+
+		@media screen and (max-width: 45em) {
+		  .home-page { display: block; }
+		}
+
+
+
+		/*--Button End--*/
+    </style>  
+       <title>Student 02 - Main Page</title
+
+	</head>
+
+  
+	<body> 
+	<ul style="list-style-type: none;">
+		<li style="float:right"><a href="stdnt2_edit.html"><img src="red-banner-and-blue-football.png" style="width:70px; height: 70px;"/></a></li>
+	</ul>
+    <!-- Start Navigation Bar -->
+	<nav class="navbar">
+	<ul class="menu">
+		<li>
+			<a href="index.html">HOME</a>
+		</li>
+		<li>
+			<a href="student_details.html">ABOUT</a>
+		</li>
+		<li>
+			<a href="buy_products.html">SHOP</a>
+		</li>
+		<li>
+			<a class="hasDropdown" href="quiz.html">ENGAGE<i class="fa fa-angle-down"></i>
+			</a>
+			<ul class="container has-multi">
+				<div class="container__list container__list-multi">
+				<div class="container__listItem">
+					<div><a href="quiz.html">Quiz</a></div>
+				</div>
+				</div>
+			</ul>
+		</li>
+		<li>
+			<a href="svg_CW.html" class="hasDropdown">SCHEMA<i class="fa fa-angle-down"></i>
+			</a>
+			<ul class="container has-multi">
+				<div class="container__list container__list-multi">
+				<div class="container__listItem">
+					<div><a href="Thumbnail_CW.html">Thumbnails</a></div>
+					<div><a href="svg_CW.html">Sitemap</a></div>
+				</div>
+				</div>
+		   </ul>
+		</li>
+		<li>
+			<a href="form.html">INQUIRE</a>
+		</li>
+		<li>
+			<a href="editors.html">EDITORS</a>
+		</li>
+	
+    
+	</nav>
+	<!-- End Navigation Bar --> 
+	<!-- Home Page Slider Start --> 
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<br /><br />
+	<hr>
+
+	<div id="content-slider">
+		<div class="slider-wrap"> 
+
+			<h1 class="slider-main-title">BE SPORTS</h1>
+
+			   
+			<input type="radio" id="input-1" name="i" >         
+			<input type="radio" id="input-2" name="i" >         
+			<input type="radio" id="input-3" name="i" >
+			<input type="radio" id="input-4" name="i" >
+
+			<nav class="slider-dot-control">
+				<label for="input-1" class="slider-dot"></label>
+				<label for="input-2" class="slider-dot"></label>
+				<label for="input-3" class="slider-dot"></label>
+				<label for="input-4" class="slider-dot"></label>
+			</nav>
+
+		  
+			<nav class="slider-arrow-control">
+				<label for="input-1"></label>
+				<label for="input-2"></label>
+				<label for="input-3"></label>
+				<label for="input-4"></label>
+			</nav>
+	   
+
+		<!-- slider Pictures -->
+			<label id="thumb-1" for="input-1" class="slider-thumb">
+				<img src="pictures/1.jpg" alt="Cricket" id="p-1">
+				<div class="slider-head">
+					<h2>Kulasekara and Jayasinghe power Sri Lanka Legends to the Final</h2>
+					<p>Nuwan Kulasekara’s brilliant spell with the ball and Chinthaka Jayasinghe’s </p>
+					<a href="https://www.thepapare.com/kulasekara-and-jayasinghe-power-sri-lanka-legends-to-the-final/"target="_blank">read more...</a>
+				</div>
+			</label>
+
+			<label id="thumb-2" for="input-2" class="slider-thumb">
+				<img src="pictures/Underwater-photograph-of-014.jpg" alt="" id="p-2">
+				<div class="slider-head">
+					<h2>SAG winners honored with 85 million</h2>
+					<p>With the end of a historic event comes a historic reward</p>
+					<a href="https://www.thepapare.com/south-asian-games-medal-winners-felicitation-athletics-swimming-news/" target="_blank" >read more...</a>
+				</div>
+			</label>         
+
+			<label id="thumb-3" for="input-3" class="slider-thumb">
+				<img src="pictures/2.jpg" alt="" id="p-3">
+				<div class="slider-head">
+					<h2>First Pro Tennis player tests Positive for Covid-19</h2> 
+					<p>Budding Brazilian star Thiago Seyboth Wild, who clinched his first</p> 
+					<a href="https://www.thepapare.com/first-pro-tennis-player-tests-positive-covid-19/" target="_blank">read more...</a>
+				</div>
+			</label>
+
+			<label id="thumb-4" for="input-4" class="slider-thumb" tabindex="13">
+				<img src="pictures/3.jpg" alt="" id="p-4">
+				<div class="slider-head">
+					<h2>Werner penalty gives slick Leipzig win at Spurs</h2>
+					<p>RB Leipzig marked their first appearance in the Champions</p>
+					<a href="https://www.thepapare.com/werner-penalty-gives-slick-leipzig-win-spurs/"target="_blank">read more...</a>
+				</div>
+			</label>
+
+		<!-- IMages  -->                           
+
+			<div class="slider">
+				<div class="slider-inner">
+
+				<figure>
+					<figcaption class="slider-head">
+						<h2>Kulasekara and Jayasinghe power Sri Lanka Legends to the Final</h2>
+						<p>Nuwan Kulasekara’s brilliant spell with the ball and Chinthaka Jayasinghe’s </p>
+						<a href="https://www.thepapare.com/kulasekara-and-jayasinghe-power-sri-lanka-legends-to-the-final/" target="_blank">read more...</a>
+					</figcaption>
+					<img src="pictures/1.jpg" alt="" id="i-1" class="slider-img">
+				</figure>
+
+				<figure>
+					<figcaption class="slider-head">
+						<h2>SAG winners honored with 85 million</h2>
+						<p>With the end of a historic event comes a historic reward</p>
+						<a href="">read more...</a>
+					</figcaption>
+					<img src="pictures/Underwater-photograph-of-014.jpg"target="_blank">
+				</figure>
+
+				<figure>
+					<figcaption class="slider-head">
+						<h2>First Pro Tennis player tests Positive for Covid-19</h2> 
+						<p>Budding Brazilian star Thiago Seyboth Wild, who clinched his first</p>
+						<a href="https://www.thepapare.com/first-pro-tennis-player-tests-positive-covid-19/"With the end of a historic event comes a historic reward">read more...</a>
+					</figcaption>
+					<img src="pictures/2.jpg" alt="" id="i-3" class="slider-img">
+				</figure>
+
+				<figure>
+					<figcaption class="slider-head">
+						<h2>Werner penalty gives slick Leipzig win at Spurs</h2>
+						<p> RB Leipzig marked their first appearance in the Champions</p>
+						<a href="https://www.thepapare.com/werner-penalty-gives-slick-leipzig-win-spurs/"target="_blank">FIND OUT MORE</a>
+					</figcaption>
+					<img src="pictures/3.jpg" alt="" id="i-4" class="slider-img">
+				</figure>  
+					
+				</div>
+				</div>             
+				 
+
+			</div>      
+		  
+		</div>
+		<!-- Shop Button Start -->   
+		<div>
+
+		<br><Br><br><br><Br><br><br><Br><br>
+		<section>
+	 
+		
+	  
+		<button onclick="window.location.href='buy_products.html';">
+		 SHOP NOW
+		</button>
+		</section>
+		<!-- Shop Button End --> 
+		</div>
+		
+		<main>
+			<div class="home-page">
+			<div class="block">
+				<h1>Umpire Bruce Oxenford retires from International Cricket</h1>
+				<p class="intro">Umpire Bruce Oxenford has decided to<br> retire from International Cricket after a fine<br> career that saw him officiate around the<br> world across all three formats of the game <br>for over 15 years.  </p>
+				<a href="https://www.thepapare.com/umpire-bruce-oxenford-retires-from-international-cricket/" class="button">SEE MORE</a>
+			</div>
+			<div class="block">
+				<img src="pictures/Oxenford-Image.jpg" alt="Umpire image">
+			</div>
+			</div>
+		</main>
+		
+		<hr>
+		<hr>
+		
+		<main>
+			<div class="home-page">
+			<div class="block">
+				<h1>A Message to My Fans</h1>
+				<p class="intro">I suppose it really started when I was five<br> years old, and New Zealand cohosted the<br> first-ever Rugby World Cup.
+
+					This was 1987,<br> and while I have so many memories from <br>around that age that are blurry, that<br> tournament is still crystal clear in my mind.</p>
+				<a href="https://www.thepapare.com/a-message-to-my-fans/" class="button">SEE MORE</a>
+			</div>
+			<div class="block">
+				<img src="pictures/Dan-4.jpg" alt="Umpire image">
+			</div>
+			</div>
+		</main>
+
+		<hr>
+		<hr>
+		
+		<main>
+		<div class="home-page">
+		<div class="block">
+			<h1>TRCSL LOOKING INTO GAMES & ESPORTS –<br> GAMER.LK TO HOST Q&A WITH DIRECTOR GENERAL</h1>
+			<p class="intro">The Telecommunications Regulatory Commission of Sri Lanka’s (TRCSL) Director General, Oshada Senanayake will be participating in a Q&A livestream hosted by CEO of Gamer.LK and President of the Sri Lankan Esports Association (SLESA) Raveen Wijayatilake, tomorrow 18th of March 2021.</p>
+			<a href="https://www.thepapare.com/umpire-bruce-oxenford-retires-from-international-cricket/" class="button">SEE MORE</a>
+		</div>
+		<div class="block">
+			<img src="pictures/TRCSL.jpg" alt="Umpire image">
+		</div>
+		</div>
+		</main>
+
+
+		<footer>
+			<strong style="float:right;"><a href="#">Top</a></strong>
+			<strong style="float:left;"><a href="stdnt2_edit.html">Page editor</a></strong>
+			</footer>
+	</div>
+	</body>
+
+</html>
+
+
+
+
+
+
+

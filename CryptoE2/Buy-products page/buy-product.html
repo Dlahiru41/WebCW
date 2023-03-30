@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy products</title>
+    <link rel="stylesheet" href="buy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@100;300;500;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ee22184a8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav-bar" >
+        <div class="logo">
+            <a href="C:\Users\ACER\Desktop\CryptoE2\Home page\index.html"><img src="./img/logo.svg"></a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Buy-products page\buy-product.html">Buy coins</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\quiz home page\quiz home.html">Learn</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Queryform\Qform.html">Help</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\about us\about us.html">About us</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Tumbnail\thumbnail page.html">Scheme</a></li>
+                <button class="nav-btn">Sign-up <span><i class="fa-solid fa-right-to-bracket"></i></span></button>
+            </ul>
+        </div>
+    </div>
+    <div class="view-1" id="top">
+        <div class="container">
+            <div class="box1">
+                <div class="heading">
+                    <div class="text">
+                        <h2>Buy</h2>
+                        <h1>Top</h1>
+                        <H2>Trending cryptocurrency</H2>
+                    </div>
+                    <a href="#explr">Explore<i class="fa-solid fa-arrow-right-to-bracket" style="margin-left: 5px;"></i></a>
+                </div>
+                <div class="img-heading">
+                    <img src="./img/mobile-bitcoin-receiving-concept-png (1).png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--section2-->
+    <div class="container">
+        <div class="heading2">
+            <h1 id="explr">Best coins today</h1>
+            <h2>Find the best selling coins</h2>
+        </div>
+        <!--table-->
+        <div class="table">
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Market cap</th>
+                    <th>24h change</th>
+                </tr>
+                <tr style="background-color: #E5E5E5;">
+                    <td>1</td>
+                    <td>Bitcoin</td>
+                    <td><span id="btn"></span>$</td>
+                    <td><span id="btn-mc"></span>$</td>
+                    <td><span id="btn-24"></span>%</td>
+                </tr>
+                <tr style="background-color: #C4C4C4;">
+                    <td>2</td>
+                    <td>Ethereum</td>
+                    <td><span id="eth"></span>$</td>
+                    <td><span id="eth-mc"></span>$</td>
+                    <td><span id="eth-24"></span>%</td>
+                </tr>
+                <tr style="background-color: #E5E5E5;">
+                    <td>3</td>
+                    <td>BNB</td>
+                    <td><span id="bnb"></span>$</td>
+                    <td><span id="bnb-mc"></span>$</td>
+                    <td><span id="bnb-24"></span>%</td>
+                </tr>
+                <tr style="background-color: #C4C4C4;">
+                    <td>4</td>
+                    <td>Dogecoin</td>
+                    <td><span id="doge"></span>$</td>
+                    <td><span id="doge-mc"></span>$</td>
+                    <td><span id="doge-24"></span>%</td>
+                </tr>
+                <tr style="background-color: #E5E5E5;">
+                    <td>5</td>
+                    <td>USDT</td>
+                    <td><span id="usdt"></span>$</td>
+                    <td><span id="usdt-mc"></span>$</td>
+                    <td><span id="usdt-24"></span>%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--section3-->
+    <div class="container">
+        <div class="cards">
+            <div class="c1">
+                <div class="title">
+                    <img src="./img/Bitcoin-Logo.png" alt="" width="150px">
+                    <h3>Bitcoin</h3>
+                    <h2><span id="btn-c"></span>$</h2>
+                </div>
+                <div class="buy-btn">
+                    <a href="#fhead" onclick="buy1()">Buy</a>
+                </div>
+            </div>
+            <div class="c1">
+                <div class="title">
+                    <img src="./img/etherium round.png" alt="" width="88px">
+                    <h3>Ethereum</h3>
+                    <h2><span id="eth-c"></span>$</h2>
+                </div>
+                <div class="buy-btn">
+                    <a href="#fhead" onclick="buy2()">Buy</a>
+                </div>
+            </div>
+            <div class="c1">
+                <div class="title">
+                    <img src="./img/binance-coin-bnb-logo-freelogovectors.net_.png" alt="" width="88px">
+                    <h3>BNB</h3>
+                    <h2><span id="bnb-c"></span>$</h2>
+                </div>
+                <div class="buy-btn">
+                    <a href="#fhead" onclick="buy3()">Buy</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="c1">
+                <div class="title">
+                    <img src="./img/dogecoin-441958.png" alt="" width="88px">
+                    <h3>Doge</h3>
+                    <h2><span id="doge-c"></span>$</h2>
+                </div>
+                <div class="buy-btn">
+                    <a href="#fhead" onclick="buy4()">Buy</a>
+                </div>
+            </div>
+            <div class="c1">
+                <div class="title">
+                    <img src="./img/tether-usdt-logo.png" alt="" width="89px">
+                    <h3>Tether(USDT)</h3>
+                    <h2><span id="usdt-c"></span>$</h2>
+                </div>
+                <div class="buy-btn">
+                    <a href="#fhead" onclick="buy5()">Buy</a>
+                </div>
+            </div>
+            <div class="c1">
+                <div class="title">
+                    <img src="./img/litecoin-ltc-logo.png" alt="" width="92px">
+                    <h3>Litecoin</h3>
+                    <h2><span id="lc-c"></span>$</h2>
+                </div>
+                <div class="buy-btn">
+                    <a href="#fhead" onclick="buy6()">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--form-->
+    <div class="container" id="fhead">
+        <div class="heading2">
+            <h1>Make the payment</h1>
+            <h2>Please fill the below details</h2>
+        </div>
+        <div class="form">
+            <form action="" id="frm" class="buyfrom">
+                <h2>Personal details</h2>
+                <label for="f-name">First name :</label>
+                <input type="text" id="f-name"><br>
+                <label for="l-name">Last name :</label>
+                <input type="text" id="l-name"><br>
+                <label for="mail">E-mail :</label>
+                <input type="email" id="mail">
+                <h2>Item details</h2>
+                <label for="item1">Item 1 :</label>
+                <select name="item" id="item1" >
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="Ethereum">Ethereum</option>
+                    <option value="Doge">Dogecoin</option>
+                    <option value="BnB">BNB</option>
+                    <option value="Litecoin">Litecoin</option>
+                    <option value="USDT">Tether(USDT)</option>
+                </select><br>
+                <label for="amount1">Amount ($) :</label>
+                <input type="number" id="amount1" value="0"><br>
+                <button class="add" id="add1" onclick="shownewdivfrm1()">Add another coin</button>
+                <div id="newdivfrm1" style="display: none;">
+                    <label for="item2">Item 2 :</label>
+                    <select name="item" id="item2" >
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="Doge">Dogecoin</option>
+                        <option value="BnB">BNB</option>
+                        <option value="Litecoin">Litecoin</option>
+                        <option value="USDT">Tether(USDT)</option>
+                    </select><br>
+                    <label for="amount2">Amount ($) :</label>
+                    <input type="number" id="amount2" value="0"><br>
+                    <button class="rmv" onclick="remove1()">Remove</button>
+                    <button class="add" id="add2" onclick="shownewdivfrm2()">Add another coin</button>
+                </div>
+                <div id="newdivfrm2" style="display: none;">
+                    <label for="item3">Item 3 :</label>
+                    <select name="item" id="item3" >
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="Doge">Dogecoin</option>
+                        <option value="BnB">BNB</option>
+                        <option value="Litecoin">Litecoin</option>
+                        <option value="USDT">Tether(USDT)</option>
+                    </select><br>
+                    <label for="amount3">Amount ($) :</label>
+                    <input type="number" id="amount3" value="0"><br>
+                    <button class="rmv" onclick="remove2()">Remove</button>
+                    <button class="add" id="add3" onclick="shownewdivfrm3()">Add another coin</button>
+                </div>
+                <div id="newdivfrm3" style="display: none;">
+                    <label for="item4">Item 4 :</label>
+                    <select name="item" id="item4" >
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="Doge">Dogecoin</option>
+                        <option value="BnB">BNB</option>
+                        <option value="Litecoin">Litecoin</option>
+                        <option value="USDT">Tether(USDT)</option>
+                    </select><br>
+                    <label for="amount4">Amount ($) :</label>
+                    <input type="number" id="amount4" value="0"><br>
+                    <button class="rmv" onclick="remove3()">Remove</button>
+                    <button class="add" id="add4" onclick="shownewdivfrm4()">Add another coin</button>
+                </div>
+                <div id="newdivfrm4" style="display: none;">
+                    <label for="item5">Item 5 :</label>
+                    <select name="item" id="item5" >
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="Doge">Dogecoin</option>
+                        <option value="BnB">BNB</option>
+                        <option value="Litecoin">Litecoin</option>
+                        <option value="USDT">Tether(USDT)</option>
+                    </select><br>
+                    <label for="amount5">Amount ($) :</label>
+                    <input type="number" id="amount5" value="0"><br>
+                    <button class="rmv" onclick="remove4()">Remove</button>
+                    <button class="add" id="add5" onclick="shownewdivfrm5()">Add another coin</button>
+                </div>
+                <div id="newdivfrm5" style="display: none;">
+                    <label for="item6">Item 6 :</label>
+                    <select name="item" id="item6" >
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="Doge">Dogecoin</option>
+                        <option value="BnB">BNB</option>
+                        <option value="Litecoin">Litecoin</option>
+                        <option value="USDT">Tether(USDT)</option>
+                    </select><br>
+                    <label for="amount6">Amount ($) :</label>
+                    <input type="number" id="amount6" value="0"><br>
+                    <button class="rmv" id="add6" onclick="remove5()">Remove</button>
+                </div>
+                <h2>Payment details</h2>
+                <label>Method :</label>
+                <input type="radio" name="method" id="paypal" value="paypal">
+                <label for="paypal"><i class="fa-brands fa-paypal" style="padding-right: 5px;"></i>Paypal</label>
+                <input type="radio" name="method" id="bank" value="bank">
+                <label for="bank"><i class="fa-solid fa-building-columns" style="padding-right: 5px;"></i>Bank transfer</label>
+                <input type="radio" name="method" id="visa" value="visa" checked>
+                <label for="visa"><i class="fa-brands fa-cc-visa" style="padding-right: 5px;"></i>Visa</label><br>
+                <button type="reset" id="frm-cancel" value="cancel" onclick="hidebill()">Cancel</button>
+                <button type="submit" id="frm-confirm" value="submit" onclick="func_submit()">Confirm</button>
+            </form>
+        </div>
+        <div id="bill" style="display: none;">
+            <h2>Invoice</h2>
+            <br>
+            <h3>Name: <span id="fn"></span> <span id="ln"></span></h3>
+            <h3>Email: <span id="em"></span></h3><br>
+            <h2>Invoice details</h2>
+            <h2>-----------------------</h2>
+            <div id="bill-1">
+                <h3>Product: <span id="product1"></span></h3>
+                <h3>Quantity: <span id="amnt1"></span> coins</h3>
+                <h3>Price: <span id="price1"></span>$</h3>
+                <br>
+            </div>
+            <div id="bill-2" style="display: none;">
+                <h3>Product: <span id="product2"></span></h3>
+                <h3>Quantity: <span id="amnt2"></span> coins</h3>
+                <h3>Price: <span id="price2"></span>$</h3>
+                <br>
+            </div>
+            <div id="bill-3" style="display: none;">
+                <h3>Product: <span id="product3"></span></h3>
+                <h3>Quantity: <span id="amnt3"></span> coins</h3>
+                <h3>Price: <span id="price3"></span>$</h3>
+                <br>
+            </div>
+            <div id="bill-4" style="display: none;">
+                <h3>Product: <span id="product4"></span></h3>
+                <h3>Quantity: <span id="amnt4"></span> coins</h3>
+                <h3>Price: <span id="price4"></span>$</h3>
+                <br>
+            </div>
+            <div id="bill-5" style="display: none;">
+                <h3>Product: <span id="product5"></span></h3>
+                <h3>Quantity: <span id="amnt5"></span> coins</h3>
+                <h3>Price: <span id="price5"></span>$</h3>
+                <br>
+            </div>
+            <div id="bill-6" style="display: none;">
+                <h3>Product: <span id="product6"></span></h3>
+                <h3>Quantity: <span id="amnt6"></span> coins</h3>
+                <h3>Price: <span id="price6"></span>$</h3>
+                <br>
+            </div>
+            <h2>Total bill: <span id="total"></span>$</h2><br>
+            <button class="rmv" onclick="reset_all()">Reset</button>
+        </div>
+    </div>
+    <div class="top">
+        <h1><a href="#top"><i class="fa-solid fa-circle-arrow-up"></i></a></i></h1>
+    </div>
+
+    <!--footer-->
+    <div>
+        <!--footer of the page-->
+        <div class="footer">
+            <div class="links">
+                <div class="col1">
+                    <ul>
+                        <li><h4>Site Navigation</h4></li>
+                        <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\index.html">Home</a></li>
+                        <li><a href="C:\Users\ACER\Desktop\CryptoE2\Buy-products page\buy-product.html">Buy Coins</a></li>
+                        <li><a href="C:\Users\ACER\Desktop\CryptoE2\Queryform\Qform.html">Help</a></li>
+                        <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\quiz home page\quiz home.html">Learn</a></li>
+                    </ul>
+                </div>
+                <div class="col1">
+                    <ul>
+                        <li><i class="fa-solid fa-horizontal-rule"></i></li>
+                        <li><a href="C:\Users\ACER\Desktop\CryptoE2\about us\about us.html">About us</a></li>
+                        <li><a href="C:\Users\ACER\Desktop\CryptoE2\Tumbnail\thumbnail page.html">Scheme</a></li>
+                        <li><a href="chamidu.html">Page editor</a></li>
+                    </ul>
+                </div>
+                <div class="col1">
+                    <ul>
+                        <li><h4>Follow us</h4></li>
+                        <li><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/?lang=en">Twitter</a></li>
+                        <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <center>
+                    <h5>2022@teamE2</h5>
+                </center>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

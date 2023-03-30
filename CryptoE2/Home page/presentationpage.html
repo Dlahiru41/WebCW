@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@100;300;500;600;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #24344C;
+            color: white;
+            overflow:hidden;
+        }
+        .head{
+            width: fit-content;
+            margin: auto;
+            margin-top: 140px;
+            font-size: 40px;
+        }
+        .members{
+            width: 320px;
+            margin: auto;
+            margin-top: 30px
+        }
+        .members li{
+            font-size: 20px;
+        }
+
+        @import "compass/css3";
+        .loader div {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-color: #ccc;
+        top:250px;
+        border-radius: 50%;
+        }
+
+        .loader div:nth-child(1) {
+        background-color: #FF5460;
+        animation: move 2s infinite cubic-bezier(.2,.64,.81,.23);
+        }
+        .loader div:nth-child(2) {
+        background-color: #FF9D84;
+        animation: move 2s 150ms infinite cubic-bezier(.2,.64,.81,.23);
+        }
+        .loader div:nth-child(3) {
+        background-color: #F0E797;
+        animation: move 2s 300ms infinite cubic-bezier(.2,.64,.81,.23);
+        }
+        .loader div:nth-child(4) {
+        background-color: #75B08A;
+        animation: move 2s 450ms infinite cubic-bezier(.2,.64,.81,.23);
+        }
+        @keyframes move {
+        0% {left: 0%;}
+        100% {left:100%;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Team E2</h1>
+    </div>
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="members">
+        <ul>
+            <li>Lahiru  :  20210362</li>
+            <li>Navindu  :  20200935</li>
+            <li>Chamidu  :  20210289</li>
+            <li>Isuru  :  20210291</li>
+        </ul>
+    </div>
+<script>
+    setTimeout(function(){
+        window.location.href = 'index.html';
+    }, 4000);
+</script>
+ </body>
+</html>

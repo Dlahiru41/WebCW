@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Thumbnail Image Page</title>
+<head>
+    <link rel="icon" href="Group2.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto E2</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@100;300;500;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ee22184a8.js" crossorigin="anonymous"></script>
+    <!--CSS of the web page-->
+    <style>
+    *{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #24344C;
+}.nav-bar{
+    padding: 5px 100px 5px ;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+.nav-bar ul li{
+    display: inline;
+    padding-left: 80px ;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: #24344C ;
+}
+.nav-bar ul li a:hover{
+    color:#FCA311 ;
+}
+.nav-btn{
+    color: white;
+    background-color: #FCA311;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 25px;
+    margin-left: 72px;
+    font-weight: 700;
+}
+.logo{
+    padding: px;
+}
+.logo img{
+    max-height: 50px;
+}
+.container{
+    margin: 0px 140px 0px;
+}
+.nav-btn:hover{
+    background-color: #e28b00;
+    transition: 0.5s;
+    transform: scale(1.05,1.05) ;
+}
+body{
+    margin:0px;
+}
+
+.btn{
+    height: 40px;
+    width: 40px;
+}
+.cg{
+    background-color:rgb(47, 224, 255);
+    background-size: cover;
+    font-weight: bold;
+}
+.co{
+    background-color:orange;
+    background-size: cover;
+    font-weight: bold;
+}
+.cy{
+    background-color: yellow;
+    background-size: cover;
+    font-weight: bold;
+}
+.deti{
+    width:100%;
+    height: 100%;
+    background-size: cover;
+}
+.fullw{
+    background-size: cover;
+}
+
+.br{
+    color: red;
+    text-align:right ;
+    font-size:medium;
+}
+.bg{
+    color: green;
+    text-align: right;
+    font-size:medium;
+}
+.bp{
+    color: purple;
+    text-align: right;
+    font-size:medium;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color: yellowgreen;
+    background-size: 20px;
+}
+
+#paara{
+    text-align: left;
+    font-family: Arial Black;
+}
+.cont{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+/*footer css*/
+.footer{
+    background-color: #FFD8AB;
+}
+
+.links{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFD8AB;
+    width: 50%;
+    margin: 0px auto;
+}
+.col1 ul{
+    list-style: none;
+}
+.col1 a{
+    text-decoration: none;
+    color: #24344C;
+}
+.copyright h5{
+    font-weight: 300;
+}
+    </style>
+    <!--JavaScripts of the webpage-->
+    <script>
+        function btn1(){
+
+            document.getElementById("paara").innerHTML="What Is a Blockchain? A blockchain is a distributed database that is shared among the nodes of a computer network. As a database, a blockchain stores information electronically in digital format. Blockchains are best known for their crucial role in cryptocurrency systems, such as Bitcoin, for maintaining a secure and decentralized record of transactions. The innovation with a blockchain is that it guarantees the fidelity and security of a record of data and generates trust without the need for a trusted third party.";
+
+        }
+        function btn2(){
+
+            document.getElementById("paara").innerHTML="What Is Cryptocurrency? A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Many cryptocurrencies are decentralized networks based on blockchain technology—a distributed ledger enforced by a disparate network of computers. A defining feature of cryptocurrencies is that they are generally not issued by any central authority, rendering them theoretically immune to government interference or manipulation.";
+
+        }
+
+        function btn3(){
+
+            document.getElementById("paara").innerHTML="Bitcoin is known as a type of cryptocurrency because it uses cryptography to keep it secure. There are no physical bitcoins, only balances kept on a public ledger that everyone has transparent access to (although each record is encrypted). All Bitcoin transactions are verified by a massive amount of computing power via a process known as mining Bitcoin is not issued or backed by any banks or governments, nor is an individual bitcoin valuable as a commodity. Despite it not being legal tender in most parts of the world, Bitcoin is very popular and has triggered the launch of hundreds of other cryptocurrencies, collectively referred to as altcoins. Bitcoin is commonly abbreviated as BTC when traded.";
+
+        }
+
+        function btn4(){
+
+            document.getElementById("paara").innerHTML="Bitcoin has not only been a trendsetter, ushering in a wave of cryptocurrencies built on a decentralized peer-to-peer network, but has also become the de facto standard for cryptocurrencies, inspiring an ever-growing legion of followers and spinoffs.";
+
+        }
+
+        function btn5(){
+
+            document.getElementById("paara").innerHTML="Crypto wallets keep your private keys – the passwords that give you access to your cryptocurrencies – safe and accessible, allowing you to send and receive cryptocurrencies like Bitcoin and Ethereum. They come in many forms, from hardware wallets like Ledger (which looks like a USB stick) to mobile apps like Coinbase Wallet, which makes using crypto as easy as shopping with a credit card online";
+
+        }
+        function colourB(){
+            var x=document.getElementById('colo').value;
+            if(x=="rgb(47, 224, 255)"){
+                document.getElementById("full").classList.add("cg");
+            }
+            else if(x=="orange"){
+                document.getElementById("full").classList.add("co");
+
+            }
+            else if(x=="yellow"){
+                document.getElementById("full").classList.add("cy");
+            }
+        }
+
+        function colourW(){
+            var x=document.getElementById('wcolo').value;
+            if(x=="red"){
+                document.getElementById("paara").classList.add("br");
+            }
+            else if(x=="green"){
+                document.getElementById("paara").classList.add("bg");
+            }
+            else if(x=="purple"){
+                document.getElementById("paara").classList.add("bp");
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<div class="nav-bar" >
+    <div class="logo">
+        <a href="C:\Users\ACER\Desktop\CryptoE2\Home page\index.html"><img src="./img/logo.svg"></a>
+    </div>
+    <div class="nav-list">
+        <ul>
+            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Buy-products page\buy-product.html">Buy coins</a></li>
+            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\quiz home page\quiz home.html">Learn</a></li>
+            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Queryform\Qform.html">Help</a></li>
+            <li><a href="C:\Users\ACER\Desktop\CryptoE2\about us\about us.html">About us</a></li>
+            <li><a href="C:\Users\ACER\Desktop\CryptoE2\Tumbnail\thumbnail page.html">Scheme</a></li>
+            <button class="nav-btn">Sign-up <span><i class="fa-solid fa-right-to-bracket"></i></span></button>
+        </ul>
+    </div>
+</div>
+<div class="fullw" id="full">
+    <div class="deti">
+        <h1>Thumbnail Image</h1>
+
+        <img src="Img0.jpg " width="100%" height="50%" name="Image" alt="Image" id="iii">
+        <div id="paara" class="ba" ><p>What Is a Blockchain?
+    A blockchain is a distributed database that is shared among the nodes of a computer network. As a database, a blockchain stores information electronically in digital format. Blockchains are best known for their crucial role in cryptocurrency systems, such as Bitcoin, for maintaining a secure and decentralized record of transactions. The innovation with a blockchain is that it guarantees the fidelity and security of a record of data and generates trust without the need for a trusted third party.</p>
+
+        </div>
+
+
+        <span onClick="btn1()"><button onClick="document.images[1].src='img0.jpg'" ><img src="img0.jpg" class='btn'></button></span>
+        <span onClick="btn2()"><button onClick="document.images[1].src='img1.jpg'" ><img src="img1.jpg" class='btn'></button></span>
+        <span onClick="btn3()"><button onClick="document.images[1].src='img2.jpg'" ><img  src="img2.jpg" class='btn'></button></span>
+        <span onClick="btn4()"><button onClick="document.images[1].src='img3.jpg'" ><img src="img3.jpg" class='btn'></button></span>
+        <span onClick="btn5()"><button onClick="document.images[1].src='img4.jpg'" ><img src="img4.jpg" class='btn'></button></span>
+
+        <br><br>
+
+        <select id='colo' onclick="colourB()">
+            <option value='rgb(47, 224, 255)'>Light Blue</option>
+            <option value='orange'>orange</option>
+            <option value='yellow'>Yellow</option>
+        </select>
+
+        <select id='wcolo' onclick="colourW()">
+            <option value='red'>Red</option>
+            <option value='green'>Green</option>
+            <option value='purple'>Purple</option>
+        </select>
+
+    </div>
+
+<br><br>
+
+</div>
+<div class="footer">
+    <div class="links">
+        <div class="col1">
+            <ul>
+                <li><h4>Site Navigation</h4></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\index.html">Home</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Buy-products page\buy-product.html">Buy Coins</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Queryform\Qform.html">Help</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Home page\quiz home page\quiz home.html">Learn</a></li>
+            </ul>
+        </div>
+        <div class="col1">
+            <ul>
+                <li><i class="fa-solid fa-horizontal-rule"></i></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\about us\about us.html">About us</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Tumbnail\thumbnail page.html">Scheme</a></li>
+                <li><a href="C:\Users\ACER\Desktop\CryptoE2\Tumbnail\site map.html">Site map</a></li>
+
+                <li><a href="isuru.html">Page editor</a></li>
+            </ul>
+        </div>
+        <div class="col1">
+            <ul>
+                <li><h4>Follow us</h4></li>
+                <li><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/">Facebook</a></li>
+                <li><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/?lang=en">Twitter</a></li>
+                <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <center>
+            <h5>2022@teamE2</h5>
+        </center>
+    </div>
+</div>
+
+
+</body>
+</html>

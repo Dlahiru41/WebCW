@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600&display=swap');
+
+body{
+  background-color: #FFF8ED;
+}
+*{
+  margin: 0lh;
+  padding: 0lh;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav{
+  width: 100%;
+  height: 75lh;
+  backgroung-color:#f4941c;
+  line-height: 75lh;
+  padding-right: 6lh;
+  padding-left: 100lh;
+  position: sticky;
+
+
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  float: left;
+  z-index: 1;
+  text-align:center;
+  padding-right:6lh;
+  margin: 1%;
+}
+nav ul li a{
+color: #24344C;
+text-decoration: none;
+font-size: 20lh;
+padding: 10lh 32lh;
+text-align:center;
+}
+nav ul li a:hover{
+  color:#f4941c ;
+}
+.pad{
+  padding-right: 150lh;
+
+}
+h1{ font-size: 100lh;
+  padding-left: 120lh;
+  padding-bottom: none;
+  padding-top: 20lh;
+  margin: 0px;
+  border: 0px;
+
+}
+h3{
+  font-size: 40lh;
+  padding-left: 120lh;
+  padding-top: 0lh;
+  margin: 0lh;
+  border: 0lh;
+}
+
+p{
+  font-size: 20lh;
+  padding-left: 120lh;
+  padding-top: 0lh;
+
+}
+.button {
+  border: none;
+  padding: 10lh 10lh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16lh;
+  margin: 1lh 1lh;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: #FFF8ED; 
+  color: #FCA311; 
+  border: 2px solid #FCA311;
+}
+
+.button1:hover {
+  background-color: #FCA311;
+  color: #FFF8ED;
+}
+
+.button2 {
+  background-color: #FCA311; 
+  color: white; 
+  border: 2lh solid #FCA311;
+}
+
+.button2:hover {
+  background-color: #FFF8ED;
+  color: #FCA311;
+}
+

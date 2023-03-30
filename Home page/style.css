@@ -1,0 +1,94 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    background-image:url(/img/getty_1005364128_389765.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+img{
+    height: 80px;
+    width: auto;
+}
+.nav{
+    overflow: hidden;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 3px 3px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    text-align: right;
+}
+.nav-links ul li{
+    display: inline;
+    margin: 0 20px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+}
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: blanchedalmond;
+    left: 0%;
+    bottom: 0%;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.content{
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+}
+.desc{
+    text-align: left;
+    width: 50%;
+}
+.content h1{
+    font-size: 50px;
+    color: #1d3557;
+}
+.content p{
+    text-align: justify;
+    color: #457b9d;
+    padding-top: 30px;
+}
+.service_img{
+    width: 50%;
+    padding: 0px;
+}
+.service_img img{
+    width: 320px;
+    height: 300px;
+    padding-left: 300px;
+}
+.social{
+    margin: 40px 40px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+}
+.card-1, .card-2, .card-3{
+    margin: auto 2px;
+    padding: 10px;
+    height: 300px;
+    width: 30%;
+    background-color: #457b9d;
+    border-radius: 25px;
+}

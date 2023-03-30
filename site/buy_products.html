@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	
+	<meta charset="UTF-8">
+	
+	<title>Sudent 1 - Buy Products</title>
+	
+	<link rel="stylesheet" href="buy_products.css">
+	
+	</head>
+	
+	<style>
+	
+	.navbar {
+	  background-color: #25283D;
+	  color: #ffffff;
+	  border-radius: 3px;
+	  max-width: 820px;
+	  margin: 20px auto 0;
+	}
+
+	.navbar .menu {
+	  display: flex;
+	  position: relative;
+	}
+
+	@media (max-width: 820px) {
+	  .navbar .menu {
+		display: block;
+		position: relative;
+	  }
+	}
+
+	.navbar .menu li {
+	  flex: 1;
+	  display: flex;
+	  text-align: center;
+	  transition: background-color 0.1s ease;
+	}
+
+	.navbar .menu a {
+	  flex: 1;
+	  justify-content: center;
+	  display: inline-flex;
+	  color: #ffffff;
+	  text-decoration: none;
+	  padding: 20px;
+	  position: relative;
+	}
+
+	.navbar .menu a  .fa {
+	  font-weight: bold;
+	  margin-left: 8px;
+	}
+
+	.navbar .menu li:hover {
+	  background-color: #611117;
+	}
+
+	.navbar .menu li:hover .container {
+	  display: flex;
+	}
+
+	@media (max-width: 820px) {
+	  .navbar .menu li:hover .container {
+		display: none;
+
+	  }
+
+	a.hasDropdown:after {
+	  position: absolute;
+	  bottom: -16px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  height: 0;
+	  width: 0;
+	  border: 8px solid transparent;
+	  border-top-color: #25283d;
+	  z-index: 2;
+	}
+	  }
+	  
+	  .fa-angle-down {
+		display: none;
+	  }
+
+
+	@media (max-width: 820px) {
+	  li:hover a.hasDropdown:after {
+		display: none;
+	  }
+	}
+
+	li:hover a.hasDropdown:after {
+	  content: '';
+	  border-top-color: #611117;
+	}
+
+	/* End Navigation Bar */
+
+	/* Start Single Section Menu */
+
+	.container {
+	  display: none;
+	  position: absolute;
+	  top: 56px;
+	  left: 0;
+	  right: 0;
+	  background-color: #6111167a;
+	  box-shadow: 0 2px 0 rgb(78, 37, 37);
+	  padding: 20px;
+	  text-align: right;
+	  margin-bottom: 15px;
+	}
+
+	.container__list {
+	  flex: 1;
+	  display: flex;
+	  flex-wrap: wrap;
+	  min-width: 0;
+	}
+
+	.container__listItem {
+	  flex: 0 0 25%;
+	  padding: 10px 20px;
+	  overflow: hidden;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+	}
+
+	.container__listItem  div {
+	  color: #ffffff;
+	  text-decoration: underline;
+	  cursor: pointer;
+	  overflow: hidden;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+	}
+	
+	</style>
+	
+	<body>
+	<nav class="navbar">
+	<ul class="menu">
+		<li>
+			<a href="index.html">HOME</a>
+		</li>
+		
+		<li>
+			<a href="student_details.html">ABOUT</a>
+		</li>
+		
+		<li>
+			<a href="buy_products.html">SHOP</a>
+		</li>
+		
+		<li>
+			<a class="hasDropdown" href="quiz.html">ENGAGE<i class="fa fa-angle-down"></i></a>
+			<ul class="container has-multi">
+				<div class="container__list container__list-multi">
+					<div class="container__listItem">
+					<div><a href="quiz.html">Quiz</a></div>
+					</div>
+				</div>
+			</ul>
+		</li>
+		
+		<li>
+			<a href="svg_CW.html" class="hasDropdown">SCHEMA<i class="fa fa-angle-down"></i></a>
+			<ul class="container has-multi">
+				<div class="container__list container__list-multi">
+					<div class="container__listItem">
+						<div><a href="Thumbnail_CW.html">Thumbnails</a></div>
+						<div><a href="svg_CW.html">Sitemap</a></div>
+					</div>
+				</div>
+		   </ul>
+		</li>
+		
+		<li>
+			<a href="form.html">INQUIRE</a>
+		</li>
+		
+		<li>
+			<a href="editors.html">EDITORS</a>
+		</li>
+		
+		</nav>
+		
+		<br /><br />
+		
+		<hr>
+		
+		<ul style="list-style-type: none;">
+			<li style="float:right"><a href="page_editor.html"><img src="logo.PNG" style="width:70px; height: 70px;"/></a></li>
+		</ul>
+		
+		<h1 style="color: white;"> BeSport</h1>
+		<h3 style="color: white;"> A place for all sporting needs with the best prices without the compromise in quality.</h3>
+		
+		<figure class="product">
+			<img src="esport.jpg" alt="e-sport t-shirt picture" />
+			<figcaption>
+				<h3>Sport Top</h3>
+				<p><br />Sizes: S / M / L<br /><br />100% fully cotton comfy wear. Represent your favorite team in style</p>
+			</figcaption>
+			<a href="#"></a>
+		</figure>
+		
+		<figure class="product">
+			<img src="speedo.jpg" alt="swimming trunk picture" />
+			<figcaption>
+				<h3>Swimming Trunk</h3>
+				<p><br />Sizes: S / M / L<br /><br />Feel unstoppable wearing Fastskin LZR Pure Intent, Speedo's latest innovation developed by swimmers for swimmers.</p>
+			</figcaption>
+			<a href="#"></a>
+		</figure>
+		
+		<figure class="product">
+			<img src="football.jpg" alt="FIFA football picture" />
+			<figcaption>
+				<h3>FIFA Licenced Football</h3>
+				<p><br />Colors: White / Red<br /><br />Play on the field with the official licenced FIFA football and add a spark to your game</p>
+			</figcaption>
+			<a href="#"></a>
+		</figure>
+		
+		
+		
+		<hr>
+		
+		<a name="Details"></a>
+		
+		<br>
+		
+		<div>
+			<h2 style="color: white;"><b>Customer Details</b></h2>
+			<input id="customer_name" type="text" placeholder="Enter your name" style="padding: 10px;" /><br /><br />
+			<input id="customer_email" type="text" placeholder="Enter your email" style="padding: 10px;" />
+		</div>
+		
+		<br />
+		
+		<h2 style="color: white;">Select Item</h2>
+		<select id="list" style="padding: 10px;" onchange="getSelectValue();">
+			<option>-- Select an item --</option>
+			<option value="Kelawalla">Kelawalla</option>
+			<option value="Thalapath">Thalapath</option>
+			<option value="Balaya">Balaya</option>
+			<option value="Paraw">Paraw</option>
+		</select>
+		
+		<br />
+		<br />
+		
+		<a name="order"></a>
+		<h2 style="color: white;">Customer Order</h2>
+		<div>
+			<table class="grocery_table" id="customer_order" align=center  style="color: white;">
+				<tr>
+					<th class="table_heading1" style="color: white;">Product Name</th>
+					<th class="table_heading2" style="color: white;">Date (dd/mm/yyy)</th>
+					<th class="table_heading3" style="color: white;">Whoelsale place</th>
+					<th class="table_heading4" style="color: white;">Whole Sale Price (&pound)</th>
+				</tr>
+			</table>
+
+
+			<p style="color: white; font-weight: bold; font-size: 2em;" id="gross_total"></p>
+		</div>
+		
+		<input type="button" value="Place Order" onclick="placeOrder()">
+		
+		<a name="invoice"></a>
+		
+		<div id="invoice">
+			<h2 style="color: white;">Invoice Summary</h2>
+			<p id="invoice_detail" style="color: white;" ></p>
+		</div>
+		
+		<hr>
+		<ul style="list-style-type: none;">
+			<li style="float:left;"><a href="page_editor.html"><h3 style="color: white;">PAGE EDITOR</h3></a></li>
+			<li style="float:right;"><a href="#"><h3 style="color: white;">TO TOP</h3></a></li>
+		</ul>
+	
+	<script>
+  
+    var invoiceDiv = document.getElementById('invoice');
+    invoiceDiv.style.visibility = 'hidden';
+    var index = 1;
+    var totalGross = 0;
+    function getSelectValue() {
+      var selectedValue = document.getElementById("list").value;
+	 
+      var table = document.getElementById("customer_order");
+      var row = table.insertRow(table.rows.length);
+      row.className = "table_heading1";
+
+
+      var cell1 = row.insertCell(0);
+      cell1.id = "itemName" + index;
+      cell1.innerHTML = selectedValue;
+
+      var cell2 = row.insertCell(1);
+      var t2 = document.createElement("input");
+      t2.type = "text";
+      t2.id = "itemRate" + index;
+      t2.className = index;
+      t2.addEventListener("input", rateChange);
+      // t2.addEventListener('input', rateChange);
+	  t2.value =Math.floor(Math.random() * 50) + 30 
+      cell2.appendChild(t2);
+
+      var cell3 = row.insertCell(2);
+      var t3 = document.createElement("input");
+      t3.type = "text";
+      t3.id = "itemQuantity" + index;
+      t3.className = index;
+      t3.addEventListener('input', quantChange);
+      t3.value = " ";
+
+      cell3.appendChild(t3);
+      var cell4 = row.insertCell(3);
+      var t4 = document.createElement("input");
+      t4.type = "text";
+      t4.disabled = true;
+      t4.id = "itemPrice" + index;
+      t4.className = index;
+      cell4.appendChild(t4);
+	  
+      index++;
+    }
+
+
+
+
+
+    function rateChange(e) {
+      var char = e.data;
+
+      if (char) {
+
+        var charCode = char.charCodeAt(0);
+
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57)) {
+          alert("Invalid number");
+          return false;
+        }
+
+      }
+
+
+
+
+      var row = e.target.attributes[2].value;
+
+      //var a = document.getElementById('txtAge1').className;
+      var quantity = document.getElementById("itemQuantity" + row).value;
+
+      document.getElementById("itemPrice" + row).value = e.target.value * quantity;
+      grossAmount();
+
+
+    }
+
+    function quantChange(e) {
+      var char = e.data;
+      if (char) {
+
+        var charCode = char.charCodeAt(0);
+
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57)) {
+          alert("Invalid number");
+          return false;
+        }
+		
+      }
+	  
+
+      var row = e.target.attributes[2].value;
+      //var a = document.getElementById('txtAge1').className;
+      var rate = document.getElementById("itemRate" + row).value;
+
+      document.getElementById("itemPrice" + row).value = e.target.value * rate;
+      grossAmount();
+    }
+
+    function grossAmount() {
+      var gross = 0;
+
+      for (var i = 1; i < index; i++) {
+
+        gross += parseInt(document.getElementById("itemPrice" + i).value);
+      }
+      totalGross = gross;
+      document.getElementById("gross_total").innerHTML = "Gross Amount : &pound " + gross;
+    }
+
+    function placeOrder() {
+	if ((document.getElementById("customer_email").value == "") && (document.getElementById("customer_name").value == "")) {
+        alert("Customer email and name must be filled!");
+	  }
+      else if (document.getElementById("customer_name").value == "") {
+        alert("Customer name must be fill!");
+      } else if (document.getElementById("customer_email").value == "") {
+        alert("Customer email must be fill!");
+		
+      }
+	  
+	  else {
+
+        var invoice = "";
+        invoice += "Name : " + document.getElementById("customer_name").value + "<br/>";
+		invoice += "E-mail : " + document.getElementById("customer_email").value + "<br/>";
+        invoice += "<br/>Invoice Details<br/>";
+        invoice += "-------------------<br/><br/>";
+
+        for (var i = 1; i < index; i++) {
+          var rate = document.getElementById("itemRate" + i).value;
+		  var rat=document.getElementById("itemQuantity" + i).value;
+          if (rate == "") {
+            alert("Unit Price must be filled out!");
+            return false;
+          }
+		  
+		  else if (rat=="") {
+
+            alert("Quantity must be filled out!");
+            return false;
+          } else {
+            invoiceDiv.style.visibility = 'visible';
+
+            invoice += "Product : " + document.getElementById("itemName" + i).innerText + "<br/>";
+            invoice += "Quantity : " + document.getElementById("itemQuantity"+i).value + "<br/>";
+            invoice += "Price : &pound " + document.getElementById("itemRate" + i).value + "<br/><br/>";
+
+          }
+
+
+        }
+        invoice += "Total Bill: &pound " + totalGross;
+        document.getElementById("invoice_detail").innerHTML = invoice;
+
+      }
+    }
+	
+	</script>
+
+	</body>
+</html>

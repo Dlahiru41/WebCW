@@ -1,0 +1,129 @@
+#rect{
+    fill: yellow;
+    stroke: red;
+    stroke-width: 3;
+}
+h1{color:rgb(19, 23, 37);
+   text-align: center; 
+}
+#line{
+    fill: yellow;
+    stroke: red;
+    stroke-width: 3;
+}
+#name{
+    position: absolute;
+    top: 220px;
+    left: 728px;
+    color:black 
+}
+#home{
+    position: absolute;
+    top: 340px;
+    left: 285px;
+    color:black 
+}
+#sitemap{
+    position: absolute;
+    top: 340px;
+    left: 460px;
+    color:black 
+}
+
+#thumb{
+    position: absolute;
+    top: 520px;
+    left: 460px;
+    color:black 
+}
+
+#sitem{
+    position: absolute;
+    top: 520px;
+    left: 330px;
+    color:black 
+}
+
+#contactus{
+    position: absolute;
+    top: 340px;
+    left: 633px;
+    color:black 
+}   
+
+#query{
+    position: absolute;
+    top: 420px;
+    left: 633px;
+    color:black 
+}   
+     
+#aboutus{
+    position:absolute;
+    top: 340px;
+    left: 785px;
+    color: black;
+}
+
+#stdd{
+    position:absolute;
+    top: 420px;
+    left: 755px;
+    color: black;
+}
+
+#shop{
+    position:absolute;
+    top: 340px;
+    left: 930px;
+    color: black;
+}
+
+#engage{
+    position:absolute;
+    top: 340px;
+    left: 1080px;
+    color: black;
+}
+
+#quiz{
+    position:absolute;
+    top: 420px;
+    left: 1090px;
+    color: black;
+}
+
+#editors{
+    position:absolute;
+    top: 340px;
+    left: 1285px;
+    color: black;
+}
+
+#editors1{
+    position:absolute;
+    top: 640px;
+    left: 975px;
+    color: black;
+}
+
+#editors2{
+    position:absolute;
+    top: 640px;
+    left: 1110px;
+    color: black;
+}
+
+#editors3{
+    position:absolute;
+    top: 640px;
+    left: 1250px;
+    color: black;
+}
+
+#editors4{
+    position:absolute;
+    top: 640px;
+    left: 1375px;
+    color: black;
+}

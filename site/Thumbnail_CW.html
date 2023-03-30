@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<link href="Thumbnail_CW.css" rel="stylesheet" type="text/css" />
+
+	<head>
+	
+	<title>Student 04 - Thumbnails</title>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	
+	</head>
+	
+	<style>
+	.navbar {
+	  background-color: #25283D;
+	  color: #ffffff;
+	  border-radius: 3px;
+	  max-width: 820px;
+	  margin: 20px auto 0;
+	}
+
+	.navbar .menu {
+	  display: flex;
+	  position: relative;
+	}
+
+	@media (max-width: 820px) {
+	  .navbar .menu {
+		display: block;
+		position: relative;
+	  }
+	}
+
+	.navbar .menu li {
+	  flex: 1;
+	  display: flex;
+	  text-align: center;
+	  transition: background-color 0.1s ease;
+	}
+
+	.navbar .menu a {
+	  flex: 1;
+	  justify-content: center;
+	  display: inline-flex;
+	  color: #ffffff;
+	  text-decoration: none;
+	  padding: 20px;
+	  position: relative;
+	}
+
+	.navbar .menu a  .fa {
+	  font-weight: bold;
+	  margin-left: 8px;
+	}
+
+	.navbar .menu li:hover {
+	  background-color: #611117;
+	}
+
+	.navbar .menu li:hover .container {
+	  display: flex;
+	}
+
+	@media (max-width: 820px) {
+	  .navbar .menu li:hover .container {
+		display: none;
+
+	  }
+
+	a.hasDropdown:after {
+	  position: absolute;
+	  bottom: -16px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  height: 0;
+	  width: 0;
+	  border: 8px solid transparent;
+	  border-top-color: #25283d;
+	  z-index: 2;
+	}
+	  }
+	  
+	  .fa-angle-down {
+		display: none;
+	  }
+
+
+	@media (max-width: 820px) {
+	  li:hover a.hasDropdown:after {
+		display: none;
+	  }
+	}
+
+	li:hover a.hasDropdown:after {
+	  content: '';
+	  border-top-color: #611117;
+	}
+
+	/* End Navigation Bar */
+
+	/* Start Single Section Menu */
+
+	.container {
+	  display: none;
+	  position: absolute;
+	  top: 56px;
+	  left: 0;
+	  right: 0;
+	  background-color: #6111167a;
+	  box-shadow: 0 2px 0 rgb(78, 37, 37);
+	  padding: 20px;
+	  text-align: right;
+	  margin-bottom: 15px;
+	}
+
+	.container__list {
+	  flex: 1;
+	  display: flex;
+	  flex-wrap: wrap;
+	  min-width: 0;
+	}
+
+	.container__listItem {
+	  flex: 0 0 25%;
+	  padding: 10px 20px;
+	  overflow: hidden;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+	}
+
+	.container__listItem  div {
+	  color: #ffffff;
+	  text-decoration: underline;
+	  cursor: pointer;
+	  overflow: hidden;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+	}
+
+	</style>
+
+	<body>
+	<a href="st4_editor.html"><img src="st4_logo.jpg" style="float: right; width: 70px; height: 70px;"></a>
+	<nav class="navbar">
+		<ul class="menu">
+			<li>
+				<a href="index.html">HOME</a>
+			</li>
+			
+			<li>
+				<a href="student_details.html">ABOUT</a>
+			</li>
+			
+			<li>
+				<a href="buy_products.html">SHOP</a>
+			</li>
+			
+			<li>
+				<a class="hasDropdown" href="quiz.html">ENGAGE<i class="fa fa-angle-down"></i></a>
+				<ul class="container has-multi">
+					<div class="container__list container__list-multi">
+					<div class="container__listItem">
+						<div><a href="quiz.html">Quiz</a></div>
+					</div>
+					</div>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="svg_CW.html" class="hasDropdown">SCHEMA<i class="fa fa-angle-down"></i></a>
+				<ul class="container has-multi">
+					<div class="container__list container__list-multi">
+					<div class="container__listItem">
+						<div><a href="Thumbnail_CW.html">Thumbnails</a></div>
+						<div><a href="svg_CW.html">Sitemap</a></div>
+					</div>
+					</div>
+			   </ul>
+			</li>
+			
+			<li>
+				<a href="form.html">INQUIRE</a>
+			</li>
+			
+			<li>
+				<a href="editors.html">EDITORS</a>
+			</li>
+		
+	</nav>
+	
+	<br /><br />
+	
+	<hr>
+
+	<center>
+	
+	<div class="pretty">
+		<div id="background-img">
+			<p id="para" style="color: white;"> Change BG / Font Color Preference</p>
+			<select id=s1 onchange="clrchange(this.value);">
+				<option id="r1" onmouseover="cha(this.id,this.value);" value="#FF7171 ">red</option>
+				<option id="r2" onmouseover="cha(this.value);" value="#00E6FF ">blue</option>
+				<option id="r3" onmouseover="cha(this.value);" value="#A8D900 ">green</option>
+				<option id="r4" onmouseover="cha(this.value);" value="#A57DFF ">purple</option>
+			<select>
+
+			<select id=s1 onchange="clrchangetext(this.value);">
+				<option id="r1" onmouseover="cha(this.id,this.value);" value="red">red</option>
+				<option id="r2" onmouseover="cha(this.value);" value="blue">blue</option>
+				<option id="r3" onmouseover="cha(this.value);" value="green">green</option>
+				<option id="r4" onmouseover="cha(this.value);" value="white">white</option>
+			<select>
+
+
+			<div class="wrap">
+				<div class="box">
+					<div class="boxInner">
+						<a class="thumbnail" href="#">
+							<img onmouseover="changeTxt(0);" src="cricket.jpg" /><span><img src="cricket.jpg" /></span>
+						</a>
+
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="boxInner">
+						<a class="thumbnail" href="#">
+							<img onmouseover="changeTxt(1);" src="football1.jpg" /><span><img src="football1.jpg" /></span>
+						</a>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="boxInner">
+						<a class="thumbnail" href="#">
+							<img onmouseover="changeTxt(2);" src="hockey.jpg" /><span><img src="hockey.jpg" /></span>
+						</a>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="boxInner">
+						<a class="thumbnail" href="#">
+							<img onmouseover="changeTxt(3);" src="rugby1.jpg" /><span><img src="rugby1.jpg" /></span>
+						</a>
+					</div>
+				</div>
+				
+				<div class="box">
+					<div class="boxInner">
+						<a class="thumbnail" href="#">
+							<img onmouseover="changeTxt(4);" src="tennis.jpg" /><span><img src="tennis.jpg" /></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<h5 id="text-feild" style="position: fixed;left: 10px;"></h5>
+
+		</div>
+	</div>
+	</center>
+
+	<script>
+	function clrchange(SelectedColor)
+	{
+	  document.body.style.backgroundColor = SelectedColor;
+	}
+
+	function clrchangetext(SelectedColor)
+	{
+		 document.getElementById("para").style.color = SelectedColor;
+		 document.getElementById("text-feild").style.color = SelectedColor;
+	}
+	function changeTxt(id){
+
+	  let textList = ["Cricket - It is a Sport where a bat and a ball<br><br><br> is used to have fun", 
+	  "Football - It is a Sport where a ball<br><br><br> is used to play on a pitch before<br><br><br> a crowd. Very Popular sport", 
+	  "Hockey - It is a Sport where a stick<br><br><br> and a puck is used to play on a pitch before<br><br><br> a crowd. Very intesive and fast sport", 
+	  "Rugby - It is a Sport where a ball<br><br><br> used to play on a pitch before<br><br><br> a crowd. Very contact high aggressive sport",
+	  "Tennis - It is a Sport where a racket<br><br><br> and tennis balls are used to play on a turf<br><br><br> before a crowd. Need high endurance"]
+	  document.getElementById("text-feild").innerHTML = textList[id];
+	}
+	</script>
+	
+	</body>
+</html>

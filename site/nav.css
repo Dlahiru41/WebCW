@@ -1,0 +1,46 @@
+body{margin:0;}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  }
+
+li{
+  float:left;
+  border-right:4px solid #bbb;
+  }
+
+li:last:child{
+  border-right:none;
+  }
+
+li a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  font-size: 60px;
+  }
+
+li a:hover {
+  background-color: #b81212;
+  }
+
+.ul1{
+  position:bottom;
+  bottom:0;
+  width:100%;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:#333;
+  }
+  
+ img {
+  float: right;
+  width: 70px;
+  height: 70px;
+ }

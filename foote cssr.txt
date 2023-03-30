@@ -1,0 +1,65 @@
+<div>
+            <!--footer of the page-->
+            <div class="footer">
+                <div class="links">
+                    <div class="col1">
+                        <ul>
+                            <li><h4>Site Navigation</h4></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Buy Coins</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Learn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col1">
+                        <ul>
+                            <li><i class="fa-solid fa-horizontal-rule"></i></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Scheme</a></li>
+                            <li><a href="navindu.html">Page editor</a></li>
+                        </ul>
+                    </div>
+                    <div class="col1">
+                        <ul>
+                            <li><h4>Follow us</h4></li>
+                            <li><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/">Facebook</a></li>
+                            <li><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/?lang=en">Twitter</a></li>
+                            <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <center>
+                        <h5>2022@teamE2</h5>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+.footer{
+    background-color: #FFD8AB;
+    position: relative;top: 1300px;
+}
+
+.links{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFD8AB;
+    width: 50%;
+    margin: 0px auto;
+}
+.col1 ul{
+    list-style: none;
+}
+.col1 a{
+    text-decoration: none;
+    color: #24344C;
+}
+.copyright h5{
+    font-weight: 300;
+}
+
+
+

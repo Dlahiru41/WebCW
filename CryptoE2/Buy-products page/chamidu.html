@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@100;300;500;600;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            color: #24344C;
+            background-image: url(./img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        #view-p{
+            position:fixed;
+            top: 0%;
+            z-index: -1;
+            background-color: #000000;
+            height: 100vh;
+            width: 100%;
+            opacity: 50%;
+        }
+        
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            margin: 150px auto;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #FCA311;
+            color: black;
+        }
+        .flip-card-front img{
+            border-radius: 10px;
+        }
+
+        .flip-card-back {
+            background-color: #FCA311;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/chamidu.jpg" alt="Avatar" style="width:300px;height:300px;">
+             </div>
+             <div class="flip-card-back">
+            <h2>Chamidu Shilakshitha</h2>
+            <p>w1867063</p><br>
+            <p>Creator of presentation page</p>
+            <p>Creator of buy-products page</p>
+          </div>
+        </div>
+    </div>
+    <div id="view-p"></div>
+</body>
+</html>
